@@ -1,0 +1,86 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css"/>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("elements", "1", {packages: "transliteration"});
+</script> 
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+function OnLoad() {                
+
+     var options = {
+        sourceLanguage:
+        google.elements.transliteration.LanguageCode.ENGLISH,
+        destinationLanguage:
+        [google.elements.transliteration.LanguageCode.HINDI],
+        shortcutKey: 'ctrl+g',
+        transliterationEnabled: true
+    };
+
+    var control = new
+        google.elements.transliteration.TransliterationControl(options);    
+    control.makeTransliteratable(["txtEnglish"]);
+
+    } //end onLoad function
+
+    google.setOnLoadCallback(OnLoad);
+
+</script> 
+</head>
+<body>
+    <header>
+      <h2>NLP in Sanskrit</h2>
+      <div class="header-right">
+        <a class="active" href="index.html">Home</a>
+        <a href="#about">About</a>
+      </div>
+    </header>
+    <section class="main-container">
+        <article class="content">
+          <p>
+              धर्मक्षेत्रे  कुरुक्षेत्रे  समवेता  युयुत्सवः
+              मामकाः  पाण्डवाश्चैव  किमी  कुर्वता  संजय
+              दृष्टिमं  स्वजनम  कृष्णा  युयुत्सु  समुपसथितं
+              सीदन्ति  मम  गात्राणि  मुखम  च  परिशुसयति
+              वेपथुश्च  शरीर  में  रो महर्षि  जयते
+              वासांसि  जीर्णानि  यथा  विहाय
+              नवनि  गृह्णाति  नवप्राणी
+              तथा  शरीराणि  विहाय  जीर्णान्यन्यानि  संयाति  नवनि  देहि
+              नैनं  छिंदन ti शस्त्राणि  नैनं  दहति  पावकः
+              न  चेनम  क्लेदयन्त्यापो  न  सोसायटी  मारुतः
+              हटो  व  प्रपाससि  स्वर्गः  जितवा  व  भोक्ष्यसे  माहिम
+              तस्मादसतिस्थ  कौन्तेय  युद्धाय  कृत  निश्चय
+              कर्मण्यवाधिकरते  माँ  फलेषु  कदाचिन
+              माँ  कर्मफलहेतुर्भुर्मा  ते  संगोस्त्वकर्मणि
+              यदा  यदा  ही  धर्मस्य  ग्लानिर्भवति  भरता
+              अभ्युत्थानमधर्मस्य  तदात्मानम  सरजाम यहां
+              जरमरन  मोक्ष मामाश्रित्य  यतन्ति  ये
+              ते  ब्रह्म  तद्विदुः  कटटसनमाध्यात्मम  कैंचा खिलाम 
+              पिताहमस्य  जगतो  माता  धता  पितामह
+              वैद्यम  पवित्रमोङ्कार  ऋक्साम  यजुरेव  च
+              त्रिविधं  नरकस्येदं  द्वाराम  नाशनमात्मनः
+              काम  क्रोधस्तथा  लोभस्तस्मादेतत्त्रयम  त्यजेत                
+              त्वमादिदेव  पुरुष  पुराण  स्त्वमस्य  विश्वस्य  परम  निधनं
+              वेत्तस्य  वेद्यं  च  परम  च  धाम  त्वया  ततम  विश्वमनन्तरूपम 
+
+          </p>
+        </article>
+        <form  action="">
+            <input class="search" id="txtEnglish" size="40" list="words" type="text" value="संस्कृत" placeholder="Enter text">
+            <datalist id="words">
+              </datalist>
+              <section class="button-list">
+                  <input type="button" id='find' value="Search text" />
+                  <input type="submit" value="Search for synonyms">
+              </section>
+          </form>
+    </section>
+    
+</body>
+<script type="text/javascript" src='hilitor.js'>  
+</script>
+<script type="text/javascript" src='autocomplete_script.js'>
+</script>
+</html>
